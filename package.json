@@ -1,0 +1,46 @@
+{
+  "name": "express-api-require",
+  "version": "0.0.1",
+  "description": "基于express的请求接口调用",
+  "main": "index.js",
+  "scripts": {
+    "commitmsg": "validate-commit-msg"
+  },
+  "config": {
+    "validate-commit-msg": {
+      "types": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "test",
+        "chore",
+        "revert",
+        "release"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuexb/express-api-require.git"
+  },
+  "keywords": [
+    "express",
+    "mock",
+    "api"
+  ],
+  "author": "xuexb <fe.xiaowu@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xuexb/express-api-require/issues"
+  },
+  "homepage": "https://github.com/xuexb/express-api-require#readme",
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "validate-commit-msg": "^2.14.0"
+  },
+  "engines": {
+    "node": ">= 4.0.0"
+  }
+}
