@@ -51,7 +51,26 @@ data.json
 --- | ---
 `/api/data.json` | 因为真实文件存在，使用 `express.static` 直接响应
 `/api/api.json` | 因为真实文件不存在，而 `api.js` 存在，走中间件模式
-`/api/404.json` | 因为真实文件不存在，又没有找到 `404.js` ，走 `next()` ，可以配合其他中间件处理
+`/api/404.json` | 因为真实文件不存在，又没有找到 `404.js` ，走 `next()` 
+
+## 扩展
+
+支持配合其他中间件形式去处理响应，如配合 [res-json](https://www.npmjs.com/package/res-json) 支持响应 JSON 和 JSONP 数据：
+
+```js
+const express = require('express')
+const app = express()
+const api = require('express-api-require')
+const json = require('res-json')
+
+// 注入 res.json, res.jsonp 方法
+app.use(json())
+
+// 注入
+app.use(api({
+    root: __dirname
+}))
+```
 
 ## 配置
 
