@@ -30,7 +30,7 @@ app.use(express.static('./'))
 app.listen(3000, () => console.log('Example app listening on port 3000!'))
 ```
 
-api.js
+/api/api.js
 
 ```js
 module.exports = (req, res, next) => {
@@ -41,7 +41,7 @@ module.exports = (req, res, next) => {
 }
 ```
 
-data.json
+/api/data.json
 
 ```json
 {}
