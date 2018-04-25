@@ -1,6 +1,6 @@
 {
   "name": "express-api-require",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "基于express的请求接口调用",
   "main": "index.js",
   "scripts": {
