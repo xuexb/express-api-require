@@ -21,7 +21,10 @@ const api = require('express-api-require')
 
 // 注入
 app.use(api({
-    root: __dirname
+    root: __dirname,
+    process(req, res, next) {
+        res.set('Access-Control-Allow-Origin', '*');
+    }
 }))
 
 // 托管静态文件
@@ -79,6 +82,7 @@ app.use(api({
 root | `string` | 请求根目录 | `process.cwd()`
 filter | `Function` | `request` 过滤器，返回 `false` 时将直接 `next()` 该请求 | `return true`
 extMap | `Object` | 请求扩展名映射 | `{json: 'js'}`
+process | `Function` | 预处理器，当返回 `false` 时停止处理<br>注意，该处理只在中间件文件或者真实 JSON 文件存在时注入 | -
 
 ## License
 MIT
